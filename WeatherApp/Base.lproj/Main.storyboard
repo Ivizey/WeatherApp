@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="DwQ-nc-HcX">
+                                <rect key="frame" x="0.0" y="24" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGU-EL-uB6">
+                                <rect key="frame" x="180.66666666666666" y="350.66666666666669" width="53" height="35"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MIy-K4-kEG">
+                                <rect key="frame" x="70.333333333333343" y="393.66666666666669" width="273.66666666666663" height="52"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cGU-EL-uB6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="A3Y-UR-VEQ"/>
+                            <constraint firstItem="DwQ-nc-HcX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="DDy-JB-afA"/>
+                            <constraint firstItem="DwQ-nc-HcX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GIk-SZ-TWU"/>
+                            <constraint firstItem="DwQ-nc-HcX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="aFQ-AB-JTN"/>
+                            <constraint firstItem="cGU-EL-uB6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gBe-gJ-U65"/>
+                            <constraint firstItem="MIy-K4-kEG" firstAttribute="top" secondItem="cGU-EL-uB6" secondAttribute="bottom" constant="8" id="h0X-ua-PAP"/>
+                            <constraint firstItem="MIy-K4-kEG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ohj-Nw-Zbs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cityLabel" destination="cGU-EL-uB6" id="9Th-Rt-Rpf"/>
+                        <outlet property="searchBar" destination="DwQ-nc-HcX" id="e18-KV-Udi"/>
+                        <outlet property="temperatureLabel" destination="MIy-K4-kEG" id="5dK-GG-wiI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="104"/>
+        </scene>
+    </scenes>
+</document>
