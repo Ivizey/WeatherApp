@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		474B418B2376C79B0047796A /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474B418A2376C79B0047796A /* SearchResponse.swift */; };
 		47C40264236B04F400859823 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C40263236B04F400859823 /* AppDelegate.swift */; };
 		47C40266236B04F400859823 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C40265236B04F400859823 /* SceneDelegate.swift */; };
 		47C40268236B04F400859823 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C40267236B04F400859823 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		474B418A2376C79B0047796A /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		47C40260236B04F400859823 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47C40263236B04F400859823 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47C40265236B04F400859823 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				47C40263236B04F400859823 /* AppDelegate.swift */,
 				47C40265236B04F400859823 /* SceneDelegate.swift */,
 				47C40267236B04F400859823 /* ViewController.swift */,
+				474B418A2376C79B0047796A /* SearchResponse.swift */,
 				47C40269236B04F400859823 /* Main.storyboard */,
 				47C4026C236B04F600859823 /* Assets.xcassets */,
 				47C4026E236B04F600859823 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				474B418B2376C79B0047796A /* SearchResponse.swift in Sources */,
 				47C40268236B04F400859823 /* ViewController.swift in Sources */,
 				47C40264236B04F400859823 /* AppDelegate.swift in Sources */,
 				47C40266236B04F400859823 /* SceneDelegate.swift in Sources */,

@@ -20,6 +20,12 @@ class ViewController: UIViewController {
         
         //let urlString = "http://api.weatherstack.com/current?access_key=12094feead81a313e94e19a30f2b823a&query=\(searchBar.text!.replacingOccurrences(of: " ", with: "%20"))"
         let urlString = "http://api.weatherstack.com/current?access_key=12094feead81a313e94e19a30f2b823a&query=New%20York"
+        request(urlString: urlString) { (data, error) in
+            
+        }
+    }
+    
+    func request(urlString: String, completion: (Data?, Error?) -> Void) {
         guard let url = URL(string: urlString) else { return }
         URLSession.shared.dataTask(with: url) { (data, responce, error) in
             DispatchQueue.main.async {
