@@ -1,5 +1,5 @@
 //
-//  SearchResponse.swift
+//  CurrentWeather.swift
 //  WeatherApp
 //
 //  Created by Pavel Bondar on 11/9/19.
@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct SearchResponse: Decodable {
+struct CurrentWeather: Codable {
+    let request: Request
     let location: Location
     let current: Current
 }

@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct Current: Decodable {
+struct Current: Codable {
     let observationTime: String
-    let temparature: Int
+    let temperature: Int
     let weatherCode: Int
-    let weatherIcons: [URL]
+    let weatherIcons: [String]
     let weatherDescriptions: [String]
     let windSpeed: Int
     let windDegree: Int
@@ -27,7 +27,7 @@ struct Current: Decodable {
     
     enum CodingKeys: String, CodingKey {
         case observationTime = "observation_time"
-        case temparature
+        case temperature
         case weatherCode = "weather_code"
         case weatherIcons = "weather_icons"
         case weatherDescriptions = "weather_descriptions"
