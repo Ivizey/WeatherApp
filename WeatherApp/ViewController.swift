@@ -13,45 +13,27 @@ class ViewController: UIViewController {
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var searchBar: UISearchBar!
-    private let ACCESS_KEY = "YOUR_ACCESS_KEY"
+    private let networkServices = NetworkService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
-        fetchWeather(search: "Cherkassy") { (weather, error) in
-            DispatchQueue.main.async {
-                self.cityLabel.text = weather?.location.name
-                self.temperatureLabel.text = "\(weather?.current.temperature ?? 0)"
-            }
-        }
+        getData()
     }
     
-    private func fetchWeather(search: String?, completionHandler: @escaping (CurrentWeather?, Error?) -> ()) {
-        var components = URLComponents()
-        components.scheme = "http"
-        components.host = "api.weatherstack.com"
-        components.path = "/current"
-        components.queryItems = [URLQueryItem(name: "access_key", value: ACCESS_KEY),
-                                 URLQueryItem(name: "query", value: search)]
-        guard let url = components.url else { return }
-        URLSession
-            .shared
-            .dataTask(with: url) { (data, response, error) in
-                guard let response = response as? HTTPURLResponse else { return }
-                if let data = data, (200...299).contains(response.statusCode) {
-                    do {
-                        let weatherData = try JSONDecoder().decode(CurrentWeather.self, from: data)
-                        completionHandler(weatherData, nil)
-                    } catch {
-                        print(error.localizedDescription)
-                        completionHandler(nil, error)
-                    }
-                }
-        }.resume()
+    private func getData() {
+        networkServices.fetchWeather(search: "Киев") { [weak self] (weather, error) in
+            guard let weather = weather else { return }
+            DispatchQueue.main.async {
+                self?.cityLabel.text = weather.location.name
+                self?.temperatureLabel.text = String(weather.current.temperature)
+            }
+        }
     }
 }
 
 extension ViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
     }
 }
