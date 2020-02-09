@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var humidityLabel: UILabel!
     @IBOutlet weak var feelslikeLabel: UILabel!
     @IBOutlet weak var visibilityLabel: UILabel!
+    @IBOutlet weak var image: UIImageView!
     private let networkServices = NetworkService()
     
     override func viewDidLoad() {
@@ -30,6 +31,8 @@ class ViewController: UIViewController {
         networkServices.fetchWeather(search: "Cherkassy") { [weak self] (weather, error) in
             guard let weather = weather else { return }
             DispatchQueue.main.async {
+                let image = self?.networkServices.images[weather.current.weatherCode]
+                self?.image.image = UIImage(systemName: image ?? "globe")
                 self?.temperatureLabel.text = String(weather.current.temperature) + " ºC"
                 self?.cityLabel.text = weather.location.name
                 self?.localtimeLabel.text = weather.location.localTime

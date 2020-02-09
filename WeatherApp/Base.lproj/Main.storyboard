@@ -106,6 +106,7 @@
                         <outlet property="descriptionsLabel" destination="dSB-a9-LpQ" id="cgT-GH-L0t"/>
                         <outlet property="feelslikeLabel" destination="Aoj-sj-MZc" id="9B1-sQ-GKO"/>
                         <outlet property="humidityLabel" destination="gJj-Hl-bVf" id="KTM-b0-6zY"/>
+                        <outlet property="image" destination="HHC-Rx-klB" id="Tqj-M6-HBo"/>
                         <outlet property="localtimeLabel" destination="DzT-l7-JrN" id="qbd-1n-G4H"/>
                         <outlet property="temperatureLabel" destination="MIy-K4-kEG" id="5dK-GG-wiI"/>
                         <outlet property="visibilityLabel" destination="2Mk-Qu-KhB" id="BlB-lZ-97X"/>
