@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		473CB0D023F0062800B6201F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473CB0CF23F0062800B6201F /* Location.swift */; };
 		473CB0D223F0067500B6201F /* Current.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473CB0D123F0067500B6201F /* Current.swift */; };
+		473CB0D423F00C0300B6201F /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473CB0D323F00C0300B6201F /* Request.swift */; };
 		474B418B2376C79B0047796A /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474B418A2376C79B0047796A /* SearchResponse.swift */; };
 		47C40264236B04F400859823 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C40263236B04F400859823 /* AppDelegate.swift */; };
 		47C40266236B04F400859823 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C40265236B04F400859823 /* SceneDelegate.swift */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		473CB0CF23F0062800B6201F /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		473CB0D123F0067500B6201F /* Current.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Current.swift; sourceTree = "<group>"; };
+		473CB0D323F00C0300B6201F /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		474B418A2376C79B0047796A /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		47C40260236B04F400859823 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47C40263236B04F400859823 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				47C40267236B04F400859823 /* ViewController.swift */,
 				474B418A2376C79B0047796A /* SearchResponse.swift */,
 				473CB0D123F0067500B6201F /* Current.swift */,
+				473CB0D323F00C0300B6201F /* Request.swift */,
 				473CB0CF23F0062800B6201F /* Location.swift */,
 				47C40269236B04F400859823 /* Main.storyboard */,
 				47C4026C236B04F600859823 /* Assets.xcassets */,
@@ -151,6 +154,7 @@
 				47C40268236B04F400859823 /* ViewController.swift in Sources */,
 				473CB0D023F0062800B6201F /* Location.swift in Sources */,
 				473CB0D223F0067500B6201F /* Current.swift in Sources */,
+				473CB0D423F00C0300B6201F /* Request.swift in Sources */,
 				47C40264236B04F400859823 /* AppDelegate.swift in Sources */,
 				47C40266236B04F400859823 /* SceneDelegate.swift in Sources */,
 			);
