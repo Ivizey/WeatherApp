@@ -24,12 +24,19 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setData()
+        setData(search: "Ukraine")
     }
     
-    private func setData() {
-        networkServices.fetchWeather(search: "Cherkassy") { [weak self] (weather, error) in
-            guard let weather = weather else { return }
+    private func setData(search: String) {
+        networkServices.fetchWeather(search: search) { [weak self] (weather, error) in
+            guard let weather = weather else {
+                let alert = UIAlertController(title: "Error",
+                                              message: error.debugDescription,
+                                              preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                self?.present(alert, animated: true)
+                return
+            }
             DispatchQueue.main.async {
                 let image = self?.networkServices.images[weather.current.weatherCode]
                 self?.image.image = UIImage(systemName: image ?? "globe")
