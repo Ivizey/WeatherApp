@@ -23,11 +23,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getData()
+        setData()
     }
     
-    private func getData() {
-        networkServices.fetchWeather(search: "Kiev") { [weak self] (weather, error) in
+    private func setData() {
+        networkServices.fetchWeather(search: "Cherkassy") { [weak self] (weather, error) in
             guard let weather = weather else { return }
             DispatchQueue.main.async {
                 self?.temperatureLabel.text = String(weather.current.temperature) + " ºC"

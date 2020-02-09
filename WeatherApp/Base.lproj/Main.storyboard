@@ -33,6 +33,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunny" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSB-a9-LpQ">
+                                <rect key="frame" x="169" y="497" width="76.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="wind speed: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4G-Za-wEt">
                                 <rect key="frame" x="148" y="585" width="118" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
@@ -63,12 +69,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunny" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSB-a9-LpQ">
-                                <rect key="frame" x="169" y="497" width="76.5" height="36"/>
-                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud.sun" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="HHC-Rx-klB">
+                                <rect key="frame" x="132" y="234.5" width="150" height="150"/>
+                                <color key="tintColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.87762087580000003" green="0.90166527029999999" blue="0.92659455540000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -82,11 +86,15 @@
                             <constraint firstItem="cGU-EL-uB6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="RRz-dR-4A9"/>
                             <constraint firstItem="DzT-l7-JrN" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="RyL-QS-zv7"/>
                             <constraint firstItem="Aoj-sj-MZc" firstAttribute="top" secondItem="gJj-Hl-bVf" secondAttribute="bottom" constant="8" id="SW3-UX-PgD"/>
+                            <constraint firstItem="HHC-Rx-klB" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.168527" id="TBU-up-OuL"/>
                             <constraint firstItem="cGU-EL-uB6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="UZ9-Vc-yu8"/>
                             <constraint firstItem="B6f-tA-eix" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="UeG-B7-j4B"/>
                             <constraint firstItem="dSB-a9-LpQ" firstAttribute="top" secondItem="MIy-K4-kEG" secondAttribute="bottom" constant="7.5" id="Zjl-7l-wMH"/>
                             <constraint firstItem="MIy-K4-kEG" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ZoJ-uH-k0t"/>
                             <constraint firstItem="B6f-tA-eix" firstAttribute="top" secondItem="E4G-Za-wEt" secondAttribute="bottom" constant="8" id="dnL-4F-tig"/>
+                            <constraint firstItem="MIy-K4-kEG" firstAttribute="top" secondItem="HHC-Rx-klB" secondAttribute="bottom" constant="29.5" id="kdG-D3-gQa"/>
+                            <constraint firstItem="HHC-Rx-klB" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.362319" id="m5m-Pg-ojl"/>
+                            <constraint firstItem="HHC-Rx-klB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="o3P-4l-qLH"/>
                             <constraint firstItem="2Mk-Qu-KhB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="oSE-xy-gEZ"/>
                             <constraint firstItem="E4G-Za-wEt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="pdw-cb-8KF"/>
                             <constraint firstItem="gJj-Hl-bVf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="vMv-Hb-txl"/>
@@ -110,4 +118,7 @@
             <point key="canvasLocation" x="139" y="104"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cloud.sun" catalog="system" width="64" height="44"/>
+    </resources>
 </document>
