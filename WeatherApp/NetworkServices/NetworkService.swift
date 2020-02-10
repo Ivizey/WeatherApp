@@ -9,7 +9,7 @@
 import Foundation
 
 class NetworkService {
-    private let ACCESS_KEY = "YOUR_ACCESS_KEY"
+    private let ACCESS_KEY = "12094feead81a313e94e19a30f2b823a"//"YOUR_ACCESS_KEY"
     let images: [Int: String] = [
         395: "cloud.snow.fill",//"Moderate or heavy snow in area with thunder",
         392: "cloud.snow",//"Patchy light snow in area with thunder",

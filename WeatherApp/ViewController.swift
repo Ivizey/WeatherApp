@@ -24,17 +24,30 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setData(search: "Ukraine")
+        setData(search: "Cherkassy")
+    }
+    
+    @objc private func createSearchAlert() {
+        let alert = UIAlertController(title: "Search", message: nil, preferredStyle: .alert)
+        alert.addTextField { field in
+            self.setData(search: field.text ?? "Ukraine")
+        }
+    }
+    
+    private func createAlert(error: String) {
+        let alert = UIAlertController(title: "Error",
+                                      message: error.debugDescription,
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        self.present(alert, animated: true)
     }
     
     private func setData(search: String) {
         networkServices.fetchWeather(search: search) { [weak self] (weather, error) in
             guard let weather = weather else {
-                let alert = UIAlertController(title: "Error",
-                                              message: error.debugDescription,
-                                              preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-                self?.present(alert, animated: true)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                    self?.createAlert(error: error.debugDescription)
+                }
                 return
             }
             DispatchQueue.main.async {
