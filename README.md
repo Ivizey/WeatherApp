@@ -2,8 +2,11 @@
 
 A native application built over a day that returns data from [Weatherstack](https://weatherstack.com) and parses the JSON into viewable results. 
 
-<img src="https://github.com/Ivizey/WeatherApp/blob/master/images/Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202020-03-06%20at%2011.41.56.png" width="200">
-<img src="https://github.com/Ivizey/WeatherApp/blob/master/images/Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202020-03-06%20at%2011.41.58.png" width="200">
+<p align="center">
+    <img src="https://github.com/Ivizey/WeatherApp/blob/master/images/Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202020-03-06%20at%2011.41.56.png" width="200">
+    <img src="https://github.com/Ivizey/WeatherApp/blob/master/images/Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202020-03-06%20at%2011.41.58.png" width="200">
+    <img src="https://github.com/Ivizey/WeatherApp/blob/master/images/Simulator%20Screen%20Shot%20-%20iPhone%2011%20-%202020-03-06%20at%2012.15.48.png" width="200">
+</p>
 
 ## Getting Started
 
