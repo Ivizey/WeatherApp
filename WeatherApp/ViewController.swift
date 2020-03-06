@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setData(search: "Kiev")
+        setData(search: "Cherkasy")
     }
     
     private func createAlert() {
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
                                       message: "Data not found\nInput correct data",
                                       preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Refresh", style: .default, handler: { _ in
-            self.setData(search: "Kiev")
+            self.setData(search: "Cherkasy")
         }))
         self.present(alert, animated: true)
     }
