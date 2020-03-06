@@ -24,14 +24,16 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setData(search: "Cerkasy")
+        setData(search: "Kiev")
     }
     
     private func createAlert() {
         let alert = UIAlertController(title: "Error",
                                       message: "Data not found\nInput correct data",
                                       preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Refresh", style: .default, handler: { _ in
+            self.setData(search: "Kiev")
+        }))
         self.present(alert, animated: true)
     }
     
