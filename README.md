@@ -134,3 +134,8 @@ struct Current: Codable {
         113: "sun.max.fill",//"Clear/Sunny",
 ```
 
+## Built With
+* [URLSession](https://developer.apple.com/documentation/foundation/urlsession) - An object that coordinates a group of related, network data-transfer tasks.
+* [UIKit](https://developer.apple.com/documentation/uikit) -  Construct and manage a graphical, event-driven user interface for your iOS or tvOS app.
+* [Weatherstack](https://weatherstack.com) - Real-Time & Historical World Weather Data API
+
