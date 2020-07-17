@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Current: Codable {
+struct Current: Decodable {
     let observationTime: String
     let temperature: Int
     let weatherCode: Int

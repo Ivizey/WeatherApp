@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Request: Codable {
+struct Request: Decodable {
     let type: String
     let query: String
     let language: String

@@ -9,7 +9,7 @@
 import Foundation
 
 class NetworkService {
-    private let ACCESS_KEY = "YOUR_ACCESS_KEY"
+    private let ACCESS_KEY = "12094feead81a313e94e19a30f2b823a"
     let images: [Int: String] = [
         395: "cloud.snow.fill",//"Moderate or heavy snow in area with thunder",
         392: "cloud.snow",//"Patchy light snow in area with thunder",
@@ -59,7 +59,7 @@ class NetworkService {
         116: "cloud",//"Partly Cloudy",
         113: "sun.max.fill",//"Clear/Sunny",
     ]
-    func fetchWeather(search: String?, completionHandler: @escaping (CurrentWeather?, Error?) -> ()) {
+    func fetchWeather(search: String?, completionHandler: @escaping (Weather?, Error?) -> ()) {
         var components = URLComponents()
         components.scheme = "http"
         components.host = "api.weatherstack.com"
@@ -73,7 +73,7 @@ class NetworkService {
                 guard let response = response as? HTTPURLResponse else { return }
                 if let data = data, (200...299).contains(response.statusCode) {
                     do {
-                        let weatherData = try JSONDecoder().decode(CurrentWeather.self, from: data)
+                        let weatherData = try JSONDecoder().decode(Weather.self, from: data)
                         completionHandler(weatherData, nil)
                     } catch {
                         print(error.localizedDescription)

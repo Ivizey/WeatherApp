@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Location: Codable {
+struct Location: Decodable {
     let name: String
     let country: String
     let region: String
