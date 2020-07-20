@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Current: Decodable {
+struct Current {
     let observationTime: String
     let temperature: Int
     let weatherCode: Int
@@ -24,7 +24,9 @@ struct Current: Decodable {
     let feelslike: Int
     let uvIndex: Int
     let visibility: Int
-    
+}
+
+extension Current: Decodable {
     enum CodingKeys: String, CodingKey {
         case observationTime = "observation_time"
         case temperature

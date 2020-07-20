@@ -20,22 +20,15 @@ class WeatherViewController: UIViewController {
     @IBOutlet private weak var feelslikeLabel: UILabel!
     @IBOutlet private weak var visibilityLabel: UILabel!
     @IBOutlet private weak var image: UIImageView!
-    private var viewModel: WeatherViewModel?
     
-    init(viewModel: WeatherViewModel) {
-        self.viewModel = viewModel
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-       super.init(coder: aDecoder)
+    static func instantiate() -> WeatherViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+        let viewController = storyboard.instantiateInitialViewController() as! WeatherViewController
+        return viewController
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel?.fetchWeather { [weak self] in
-            self?.cityLabel.text = self?.viewModel?.weather?.request.language ?? ""
-        }
     }
 }
