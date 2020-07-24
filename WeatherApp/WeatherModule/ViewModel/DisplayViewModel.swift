@@ -1,54 +1,59 @@
 //
-//  ViewModel.swift
+//  DisplayViewModel.swift
 //  WeatherApp
 //
 //  Created by Pavel Bondar on 20.07.2020.
 //  Copyright © 2020 Pavel Bondar. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct DisplayViewModel {
     private let weather: Weather
     
-    var displayTemperature: String {
-        guard let temperature = weather.current?.temperature else { return "" }
-        return String(temperature)
+    private var temperature: String {
+        guard let temperature = weather.current?.temperature else { return "no data available ..." }
+        return "Temperature: " + String(temperature) + "\n"
     }
-    var displayCity: String {
-        guard let city = weather.location?.name else { return "" }
-        return city
+    private var city: String {
+        return  nilCheck(description: "City", weather.location?.name)
     }
-    var displayLocation: String {
-        guard let location = weather.location?.country else { return "" }
-        return "Country: " + location
+    private var location: String {
+        return  nilCheck(description: "Country", weather.location?.country)
     }
-    var displayDescription: String {
-        guard let description = weather.current?.weatherDescriptions.first else { return "" }
-        return "Description: " + description
+    private var description: String {
+        return  nilCheck(description: "Description", weather.location?.name)
     }
-    var displayWindSpeed: String {
-        guard let windSpeed = weather.current?.windSpeed else { return "" }
-        return "Wind speed: " + String(windSpeed)
+    private var windSpeed: String {
+        return nilCheck(description: "Wind speed", weather.current?.windSpeed)
     }
-    var displayWindDir: String {
-        guard let windDir = weather.current?.windDir else { return "" }
-        return "Wind dir: " + windDir
+    private var windDir: String {
+        return nilCheck(description: "Wind dir", weather.current?.windDir)
     }
-    var displayHumidity: String {
-        guard let humidity = weather.current?.humidity else { return "" }
-        return "Humidity: " + String(humidity)
+    private var humidity: String {
+        return nilCheck(description: "Humidity", weather.current?.humidity)
     }
-    var displayFeelslike: String {
-        guard let feelslike = weather.current?.feelslike else { return "" }
-        return "Feelslike: " + String(feelslike)
+    private var feelslike: String {
+        return nilCheck(description: "Feelslike", weather.current?.feelslike)
     }
-    var displayVisibility: String {
-        guard let visibility = weather.current?.visibility else { return "" }
-        return "Visibility" + String(visibility)
+    private var visibility: String {
+        return  nilCheck(description: "Visibility", weather.current?.visibility)
+    }
+    
+    var displayImage: UIImage {
+        return UIImage().setWeatherImage(code: weather.current?.weatherCode)
+    }
+    
+    var displayData: String {
+        return temperature + city + location + description + windSpeed + windDir + humidity + feelslike + visibility
     }
     
     init(weather: Weather) {
         self.weather = weather
+    }
+    
+    private func nilCheck(description: String, _ value: String?) -> String {
+        guard let value = value else { return "" }
+        return description + ": " + value + "\n"
     }
 }

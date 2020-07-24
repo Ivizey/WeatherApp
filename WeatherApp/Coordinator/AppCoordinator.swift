@@ -1,5 +1,5 @@
 //
-//  AppCoordintor.swift
+//  AppCoordinator.swift
 //  WeatherApp
 //
 //  Created by Pavel Bondar on 20.07.2020.

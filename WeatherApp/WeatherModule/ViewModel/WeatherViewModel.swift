@@ -7,7 +7,18 @@
 //
 
 import Foundation
+import RxSwift
 
-class WeatherViewModel {
+final class WeatherViewModel {
+    private let weatherService: WeatherServiceProtocol
     
+    init(weatherService: WeatherServiceProtocol = WeatherService()) {
+        self.weatherService = weatherService
+    }
+    
+    func fetchWeatherViewModels(city: String) -> Observable<DisplayViewModel> {
+        weatherService.fetchWeather(city: city).map { weather in
+            DisplayViewModel(weather: weather)
+        }
+    }
 }
