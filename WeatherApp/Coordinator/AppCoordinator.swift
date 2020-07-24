@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AppCoordintor {
+class AppCoordinator {
     private let window: UIWindow
     
     init(window: UIWindow) {
@@ -16,9 +16,9 @@ class AppCoordintor {
     }
     
     func start() {
-        let viewController = WeatherViewController.instantiate()
-        let navigationController = UINavigationController(rootViewController: viewController)
-        window.rootViewController = navigationController
+        let weatherViewModel = WeatherViewModel()
+        let viewController = WeatherViewController.instantiate(viewModel: weatherViewModel)
+        window.rootViewController = viewController
         window.makeKeyAndVisible()
     }
 }
