@@ -4,7 +4,7 @@
 ![](https://img.shields.io/badge/Alamofire-4.9.1-orange)
 ![](https://img.shields.io/badge/Version-1.0-blue)
 
-A single application that returns data from [Weatherstack](https://weatherstack.com) and parses the JSON into viewable results. 
+A simple application that returns data from [Weatherstack](https://weatherstack.com) and parses the JSON into viewable results. 
 
 <p align="center">
     <img src="launch.png" width="200">
