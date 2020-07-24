@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Location: Decodable {
+struct Location {
     let name: String
     let country: String
     let region: String
@@ -18,7 +18,9 @@ struct Location: Decodable {
     let localTime: String
     let localTimeEpoch: Int
     let utcOffset: String
-    
+}
+
+extension Location: Decodable {
     enum CodingKeys: String, CodingKey {
         case name
         case country
