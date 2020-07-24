@@ -22,7 +22,7 @@ struct DisplayViewModel {
         return  nilCheck(description: "Country", weather.location?.country)
     }
     private var description: String {
-        return  nilCheck(description: "Description", weather.location?.name)
+        return  nilCheck(description: "Description", weather.current?.weatherDescriptions.first)
     }
     private var windSpeed: String {
         return nilCheck(description: "Wind speed", weather.current?.windSpeed)
