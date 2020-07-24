@@ -10,8 +10,6 @@ xcuserdata/
 *.xcscmblueprint
 *.xccheckout
 
-*.md
-*.png
 *.xcworkspace
 *.xcuserstate
 
@@ -40,6 +38,7 @@ DerivedData/
 ## Playgrounds
 timeline.xctimeline
 playground.xcworkspace
+*.playground
 
 # Swift Package Manager
 #

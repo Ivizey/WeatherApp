@@ -9,7 +9,13 @@
 import Foundation
 
 struct Weather: Decodable {
-    let request: Request
+    let request: Request?
     let location: Location?
     let current: Current?
+}
+
+extension Weather {
+    static func makeDefault() -> Weather {
+        return Weather(request: nil, location: nil, current: nil)
+    }
 }

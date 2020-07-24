@@ -7,24 +7,18 @@
 //
 
 import Foundation
+import RxSwift
 
-class WeatherViewModel {
-    var weather: Weather?
-    var error: Error?
-    var refreshing = false
-    private let networkService: NetworkService
+final class WeatherViewModel {
+    private let weatherService: WeatherServiceProtocol
     
-    init(networkService: NetworkService) {
-        self.networkService = networkService
+    init(weatherService: WeatherServiceProtocol = WeatherService()) {
+        self.weatherService = weatherService
     }
     
-    func fetchWeather(completion: @escaping() -> Void) {
-        refreshing = true
-        networkService.fetchWeather(search: "Kiev") { [weak self] (weather, error) in
-            self?.weather = weather
-            self?.error = error
-            self?.refreshing = false
-            completion()
+    func fetchWeatherViewModels(city: String) -> Observable<DisplayViewModel> {
+        weatherService.fetchWeather(city: city).map { weather in
+            DisplayViewModel(weather: weather)
         }
     }
 }
